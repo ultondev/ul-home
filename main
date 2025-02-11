@@ -1,47 +1,64 @@
 proxy-groups:
 - name: 🔴TELKOMSEL
-  ##type: url-test##
+  #type: url-test#
   type: load-balance
   disable-udp: false
   proxies:
-  - 1. 🔴AH3
-  - 2. 🔴AH3
-  - 3. 🔴USGL
-  - 4. 🔴FRHW
-  - 5. 🔴Network FRHW2
-  - 6. 🔴USHW
-  - 7. 🔴IDJGO
-  - 8. 🔴 Network UK.HW1
-  - 9. 🔴 Network UK.HW2
-  - 10. H2
-  - 11. H3
-  - 12. IDHE
-  - 13. H1
-  - 14. US
-  - 15. AMP
+  - 1. 🔴HS3
+  - 2. 🔴HS3
+  - 3. 🔴HS3
+  - 4. 🔴HS3
+  - 5. 🔴HS3
+  - 6. 🔴HS3
+  - 7. 🔴HUK
+  - 8. 🔴HUK
+  - 9. 🔴HUS
+  - 10. 🔴HUS
+  - 11. 🔴HF
+  - 12. 🔴HF
+  - 13. 🔴SS4
+  - 14. 🔴SS4
+  - 15. 🔴SS4
   url: http://www.gstatic.com/generate_204
   interval: '300'
-- name: ♾️ALL
+- name: 🟡INDOSAT
   type: load-balance
   disable-udp: false
   proxies:
-  - 1. EU-B
-  - 2. FR-B
-  - 3. GE-B 
-  - 4. TU-B
-  - 5. UK-B
-  - 6. TH-B
-  - 7. CA-B
-  - 8. MUX-B
-  - 9. MEL-B
-  - 10. H2-B
-  - 11. H3-B
-  - 12. IDHE-B
-  - 13. H1-B
-  - 14. US-B
-  - 15. AMP-B
+  - 1. 🟡EU-B
+  - 2. 🟡FR-B
+  - 3. 🟡GE-B 
+  - 4. 🟡TU-B
+  - 5. 🟡UK-B
+  - 6. 🟡TH-B
+  - 7. 🟡CA-B
+  - 8. 🟡MUX-B
+  - 9. 🟡MEL-B
+  - 10. 🟡H2-B
+  - 11. 🟡H3-B
+  - 12. 🟡IDHE-B
+  - 13. 🟡H1-B
+  - 14. 🟡US-B
+  - 15. 🟡AMP-B
   url: http://www.gstatic.com/generate_204
   interval: '300'
+- name: 🖱GAME
+  type: load-balance
+  disable-udp: false
+  proxies:
+  - 1. 🖱SS4
+  - 2. 🖱SS4
+  - 3. 🖱SS3 
+  - 4. 🖱SS3
+  - 5. 🖱SS1
+  - 6. 🖱SS4
+  - 7. 🖱SS4
+  - 8. 🖱SS3
+  - 9. 🖱SS3
+  - 10. 🖱SS1
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+
 #🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰
 rule-providers:
   Rule-Direct:
@@ -52,9 +69,10 @@ rule-providers:
     type: file
     behavior: classical
     path: "./reject.yaml"
-#🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰    
+#🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰
+
 proxies:
-- name: 1. 🔴AH3
+- name: 1. 🔴HS3
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -68,7 +86,7 @@ proxies:
       Host: sg3.6n6.net
   udp: true
 
-- name: 2. 🔴AH3
+- name: 2. 🔴HS3
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -82,7 +100,7 @@ proxies:
       Host: sg3.6n6.net
   udp: true
 
-- name: 3. 🔴USGL
+- name: 3. 🔴HS3
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -96,7 +114,7 @@ proxies:
       Host: tro-us02.gproxy.gratis
   udp: true
 
-- name: 4. 🔴FRHW
+- name: 4. 🔴HS3
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -110,7 +128,7 @@ proxies:
       Host: fr1.test3.net
   udp: true
 
-- name: 5. 🔴Network FRHW2
+- name: 5. 🔴HS3
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -124,7 +142,7 @@ proxies:
       Host: fr1.test3.net
   udp: true
 
-- name: 6. 🔴USHW
+- name: 6. 🔴HS3
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -138,7 +156,7 @@ proxies:
       Host: usa.test3.net&
   udp: true
 
-- name: 7. 🔴IDJGO
+- name: 7. 🔴HUK
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -152,7 +170,7 @@ proxies:
       Host: id2go.ipservers.xyz
   udp: true
 
-- name: 8. 🔴 Network UK.HW1
+- name: 8. 🔴HUK
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -166,7 +184,7 @@ proxies:
       Host: uk1.test3.net
   udp: true
 
-- name: 9. 🔴 Network UK.HW2
+- name: 9. 🔴HS
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -180,7 +198,7 @@ proxies:
       Host: uk1.test3.net
   udp: true
 
-- name: 10. H2
+- name: 10. 🔴HS
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -194,7 +212,7 @@ proxies:
       Host: sg6-trojan.bonds.id
   udp: true
 
-- name: 11. H3
+- name: 11. 🔴HF
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -208,7 +226,7 @@ proxies:
       Host: sg2-trojan.bonds.id
   udp: true
 
-- name: 12. IDHE
+- name: 12. 🔴HF
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -222,50 +240,50 @@ proxies:
       Host: sg-4.test3.net
   udp: true
 
-- name: 13. H1
-  server: 104.18.107.64
+- name: 13. 🔴SS4
+  server: 104.26.7.171
   port: 443
   type: trojan
   password: 407a0540-60d5-11ee-b536-1239d0255272
   skip-cert-verify: true
-  sni: sg2-trojan.bonds.id
+  sni: sg4.v4trojn.xyz
   network: ws
   ws-opts:
-    path: /howdy
+    path: /trojan-ws
     headers:
-      Host: sg2-trojan.bonds.id
+      Host: sg4.v4trojn.xyz
   udp: true
 
-- name: 14. US
-  server: 104.18.107.64
+- name: 14. 🔴SS4
+  server: 104.26.7.171
   port: 443
   type: trojan
   password: 4a14d620-60d4-11ee-a15c-1239d0255272
   skip-cert-verify: true
-  sni: id-1.test3.net
+  sni: sg4.v4trojn.xyz
   network: ws
   ws-opts:
-    path: /howdy
+    path: /trojan-ws
     headers:
-      Host: id-1.test3.net
+      Host: sg4.v4trojn.xyz
   udp: true
 
-- name: 15. AMP
-  server: 104.18.107.64
+- name: 15. 🔴SS4
+  server: 104.26.7.171
   port: 443
   type: trojan
-  password: ac3166a0-60d4-11ee-9eea-1239d0255272
+  password: 8e3870a0-8d9b-431f-a423-47a0187fb9b8
   skip-cert-verify: true
-  sni: sg1-trojan.bonds.id
+  sni: sg4.v4trojn.xyz
   network: ws
   ws-opts:
-    path: /howdy
+    path: /trojan-ws
     headers:
-      Host: sg1-trojan.bonds.id
+      Host: sg4.v4trojn.xyz
   udp: true
 
-#2⃣
-- name: 1. EU-B
+#2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣
+- name: 1. 🟡EU-B
   server: 104.16.65.85
   port: 443
   type: trojan
@@ -279,7 +297,7 @@ proxies:
       Host: ro1.test3.net
   udp: true
 
-- name: 2. FR-B
+- name: 2. 🟡FR-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -293,7 +311,7 @@ proxies:
       Host: de1.test3.net
   udp: true
 
-- name: 3. GE-B
+- name: 3. 🟡GE-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -307,7 +325,7 @@ proxies:
       Host: sg1-trojan.bonds.id
   udp: true
 
-- name: 4. TU-B
+- name: 4. 🟡TU-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -321,7 +339,7 @@ proxies:
       Host: fr1.test3.net
   udp: true
 
-- name: 5. UK-B
+- name: 5. 🟡UK-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -335,7 +353,7 @@ proxies:
       Host: sg3-trojan.bonds.id
   udp: true
 
-- name: 6. TH-B
+- name: 6. 🟡TH-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -349,7 +367,7 @@ proxies:
       Host: sg-4.test3.net
   udp: true
 
-- name: 7. CA-B
+- name: 7. 🟡CA-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -363,7 +381,7 @@ proxies:
       Host: ro1.test3.net
   udp: true
 
-- name: 8. MUX-B
+- name: 8. 🟡MUX-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -377,7 +395,7 @@ proxies:
       Host: tr.test3.net
   udp: true
 
-- name: 9. MEL-B
+- name: 9. 🟡MEL-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -391,7 +409,7 @@ proxies:
       Host: th1-trojan.bonds.id
   udp: true
 
-- name: 10. H2-B
+- name: 10. 🟡H2-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -405,7 +423,7 @@ proxies:
       Host: sg6-trojan.bonds.id
   udp: true
 
-- name: 11. H3-B
+- name: 11. 🟡H3-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -419,7 +437,7 @@ proxies:
       Host: sg2-trojan.bonds.id
   udp: true
 
-- name: 12. IDHE-B
+- name: 12. 🟡IDHE-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -433,7 +451,7 @@ proxies:
       Host: sg-4.test3.net
   udp: true
 
-- name: 13. H1-B
+- name: 13. 🟡H1-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -447,7 +465,7 @@ proxies:
       Host: sg2-trojan.bonds.id
   udp: true
 
-- name: 14. US-B
+- name: 14. 🟡US-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -461,7 +479,7 @@ proxies:
       Host: id-1.test3.net
   udp: true
 
-- name: 15. AMP-B
+- name: 15. 🟡AMP-B
   server: 104.18.107.64
   port: 443
   type: trojan
@@ -473,6 +491,148 @@ proxies:
     path: /howdy
     headers:
       Host: sg1-trojan.bonds.id
+  udp: true
+
+#3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣3⃣
+
+- name: 1. 🖱SS4
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 51e14c8f-d7ec-414a-a4a1-4be8a910bc04
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 2. 🖱SS4
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 51e14c8f-d7ec-414a-a4a1-4be8a910bc04
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 3. 🖱SS3
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 74c1d470-5639-11ee-9a6b-1239d0255272
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 4. 🖱SS3
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: b530d650-60d2-11ee-b208-1239d0255272
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 5. 🖱SS1
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: q
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 6. 🖱SS4
+  server: 104.17.241.25
+  port: 443
+  type: trojan
+  password: fa6f9f70-5633-11ee-850f-1239d0255272
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 7. 🖱SS4
+  server: 104.17.241.25
+  port: 443
+  type: trojan
+  password: d5157150-5636-11ee-913c-1239d0255272
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 8. 🖱SS3
+  server: 104.17.241.25
+  port: 443
+  type: trojan
+  password: 3c72b3c0-60d3-11ee-a83a-1239d0255272
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 9. 🖱SS3
+  server: 104.17.241.25
+  port: 443
+  type: trojan
+  password: 715da090-60d3-11ee-b5bf-1239d0255272
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 10. 🖱SS1
+  server: 104.17.241.25
+  port: 443
+  type: trojan
+  password: a6f0f280-60d3-11ee-b7d3-1239d0255272
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
   udp: true
 
 #🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰    
