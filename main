@@ -111,7 +111,7 @@ proxies:
   ws-opts:
     path: /trojan-ws
     headers:
-      Host: tro-us02.gproxy.gratis
+      Host: sg3.6n6.net
   udp: true
 
 - name: 4. 🔴HS3
@@ -125,7 +125,7 @@ proxies:
   ws-opts:
     path: /howdy
     headers:
-      Host: fr1.test3.net
+      Host: sg3.6n6.net
   udp: true
 
 - name: 5. 🔴HS3
@@ -139,7 +139,7 @@ proxies:
   ws-opts:
     path: /howdy
     headers:
-      Host: fr1.test3.net
+      Host: sg3.6n6.net
   udp: true
 
 - name: 6. 🔴HS3
@@ -153,7 +153,7 @@ proxies:
   ws-opts:
     path: /howdy
     headers:
-      Host: usa.test3.net&
+      Host: sg3.6n6.net
   udp: true
 
 - name: 7. 🔴HUK
