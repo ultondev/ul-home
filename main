@@ -161,7 +161,7 @@ proxies:
   server: 104.26.7.171
   port: 443
   type: trojan
-  password: 27dc1590-e839-11ef-99e0-1239d0255272
+  password: 8c966540-e83b-11ef-9a8f-1239d0255272
   skip-cert-verify: true
   sni: uk1.test3.net
   network: ws
