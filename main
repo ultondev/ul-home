@@ -106,7 +106,7 @@ proxies:
   type: trojan
   password: 76fac47f-5bfb-45e4-99b6-72a073904e71
   skip-cert-verify: true
-  sni: tro-us02.gproxy.gratis
+  sni: sg3.6n6.net
   network: ws
   ws-opts:
     path: /trojan-ws
@@ -120,7 +120,7 @@ proxies:
   type: trojan
   password: 3db5a980-dc89-11ef-95e3-1239d0255272
   skip-cert-verify: true
-  sni: fr1.test3.net
+  sni: sg3.6n6.net
   network: ws
   ws-opts:
     path: /howdy
@@ -134,7 +134,7 @@ proxies:
   type: trojan
   password: 4cb05e00-dd87-11ef-b1a9-1239d0255272
   skip-cert-verify: true
-  sni: fr1.test3.net
+  sni: sg3.6n6.net
   network: ws
   ws-opts:
     path: /howdy
@@ -146,9 +146,9 @@ proxies:
   server: 104.26.7.171
   port: 443
   type: trojan
-  password: 1056d5c0-dc87-11ef-8a3c-1239d0255272
+  password: 31067970-e82e-11ef-bebb-1239d0255272
   skip-cert-verify: true
-  sni: usa.test3.net&
+  sni: sg3.6n6.net
   network: ws
   ws-opts:
     path: /howdy
