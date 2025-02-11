@@ -104,7 +104,7 @@ proxies:
   server: 104.26.7.171
   port: 443
   type: trojan
-  password: 76fac47f-5bfb-45e4-99b6-72a073904e71
+  password: c92d2240-e82e-11ef-bfc4-1239d0255272
   skip-cert-verify: true
   sni: sg3.6n6.net
   network: ws
@@ -118,7 +118,7 @@ proxies:
   server: 104.26.7.171
   port: 443
   type: trojan
-  password: 3db5a980-dc89-11ef-95e3-1239d0255272
+  password: de5f2fc0-e82e-11ef-af21-1239d0255272
   skip-cert-verify: true
   sni: sg3.6n6.net
   network: ws
