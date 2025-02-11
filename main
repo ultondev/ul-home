@@ -1,1 +1,540 @@
-cek cek 123
+proxy-groups:
+- name: 🔴TELKOMSEL
+  ##type: url-test##
+  type: load-balance
+  disable-udp: false
+  proxies:
+  - 1. 🔴AH3
+  - 2. 🔴AH3
+  - 3. 🔴USGL
+  - 4. 🔴FRHW
+  - 5. 🔴Network FRHW2
+  - 6. 🔴USHW
+  - 7. 🔴IDJGO
+  - 8. 🔴 Network UK.HW1
+  - 9. 🔴 Network UK.HW2
+  - 10. H2
+  - 11. H3
+  - 12. IDHE
+  - 13. H1
+  - 14. US
+  - 15. AMP
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+- name: ♾️ALL
+  type: load-balance
+  disable-udp: false
+  proxies:
+  - 1. EU-B
+  - 2. FR-B
+  - 3. GE-B 
+  - 4. TU-B
+  - 5. UK-B
+  - 6. TH-B
+  - 7. CA-B
+  - 8. MUX-B
+  - 9. MEL-B
+  - 10. H2-B
+  - 11. H3-B
+  - 12. IDHE-B
+  - 13. H1-B
+  - 14. US-B
+  - 15. AMP-B
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+#🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰
+rule-providers:
+  Rule-Direct:
+    type: file
+    behavior: classical
+    path: "./direct.yaml"
+  Rule-Reject:
+    type: file
+    behavior: classical
+    path: "./reject.yaml"
+#🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰    
+proxies:
+- name: 1. 🔴AH3
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 5de601d0-dad5-11ef-ba9e-1239d0255272
+  skip-cert-verify: true
+  sni: sg3.6n6.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3.6n6.net
+  udp: true
+
+- name: 2. 🔴AH3
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 6fd36030-dbef-11ef-9ec5-1239d0255272
+  skip-cert-verify: true
+  sni: sg3.6n6.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3.6n6.net
+  udp: true
+
+- name: 3. 🔴USGL
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 76fac47f-5bfb-45e4-99b6-72a073904e71
+  skip-cert-verify: true
+  sni: tro-us02.gproxy.gratis
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: tro-us02.gproxy.gratis
+  udp: true
+
+- name: 4. 🔴FRHW
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 3db5a980-dc89-11ef-95e3-1239d0255272
+  skip-cert-verify: true
+  sni: fr1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: fr1.test3.net
+  udp: true
+
+- name: 5. 🔴Network FRHW2
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 4cb05e00-dd87-11ef-b1a9-1239d0255272
+  skip-cert-verify: true
+  sni: fr1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: fr1.test3.net
+  udp: true
+
+- name: 6. 🔴USHW
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 1056d5c0-dc87-11ef-8a3c-1239d0255272
+  skip-cert-verify: true
+  sni: usa.test3.net&
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: usa.test3.net&
+  udp: true
+
+- name: 7. 🔴IDJGO
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: jagoanssh-elwowss
+  skip-cert-verify: true
+  sni: id2go.ipservers.xyz
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: id2go.ipservers.xyz
+  udp: true
+
+- name: 8. 🔴 Network UK.HW1
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 6fa99340-dd88-11ef-8f25-1239d0255272
+  skip-cert-verify: true
+  sni: uk1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: uk1.test3.net
+  udp: true
+
+- name: 9. 🔴 Network UK.HW2
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 4f1544a0-dddc-11ef-a588-1239d0255272
+  skip-cert-verify: true
+  sni: uk1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: uk1.test3.net
+  udp: true
+
+- name: 10. H2
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: a6f0f280-60d3-11ee-b7d3-1239d0255272
+  skip-cert-verify: true
+  sni: sg6-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg6-trojan.bonds.id
+  udp: true
+
+- name: 11. H3
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: d3111010-60d3-11ee-9c2a-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg2-trojan.bonds.id
+  udp: true
+
+- name: 12. IDHE
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 18db31e0-60d4-11ee-b3d7-1239d0255272
+  skip-cert-verify: true
+  sni: sg-4.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg-4.test3.net
+  udp: true
+
+- name: 13. H1
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 407a0540-60d5-11ee-b536-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg2-trojan.bonds.id
+  udp: true
+
+- name: 14. US
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 4a14d620-60d4-11ee-a15c-1239d0255272
+  skip-cert-verify: true
+  sni: id-1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: id-1.test3.net
+  udp: true
+
+- name: 15. AMP
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: ac3166a0-60d4-11ee-9eea-1239d0255272
+  skip-cert-verify: true
+  sni: sg1-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg1-trojan.bonds.id
+  udp: true
+
+#2⃣
+- name: 1. EU-B
+  server: 104.16.65.85
+  port: 443
+  type: trojan
+  password: 39066a20-60d2-11ee-bdd9-1239d0255272
+  skip-cert-verify: true
+  sni: ro1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: ro1.test3.net
+  udp: true
+
+- name: 2. FR-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 7ee09930-60d2-11ee-96b2-1239d0255272
+  skip-cert-verify: true
+  sni: de1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: de1.test3.net
+  udp: true
+
+- name: 3. GE-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 74c1d470-5639-11ee-9a6b-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg1-trojan.bonds.id
+  udp: true
+
+- name: 4. TU-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: b530d650-60d2-11ee-b208-1239d0255272
+  skip-cert-verify: true
+  sni: fr1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: fr1.test3.net
+  udp: true
+
+- name: 5. UK-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: q
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 6. TH-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: fa6f9f70-5633-11ee-850f-1239d0255272
+  skip-cert-verify: true
+  sni: sg-4.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg-4.test3.net
+  udp: true
+
+- name: 7. CA-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: d5157150-5636-11ee-913c-1239d0255272
+  skip-cert-verify: true
+  sni: ro1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: ro1.test3.net
+  udp: true
+
+- name: 8. MUX-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 3c72b3c0-60d3-11ee-a83a-1239d0255272
+  skip-cert-verify: true
+  sni: tr.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: tr.test3.net
+  udp: true
+
+- name: 9. MEL-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 715da090-60d3-11ee-b5bf-1239d0255272
+  skip-cert-verify: true
+  sni: th1-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: th1-trojan.bonds.id
+  udp: true
+
+- name: 10. H2-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: a6f0f280-60d3-11ee-b7d3-1239d0255272
+  skip-cert-verify: true
+  sni: sg6-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg6-trojan.bonds.id
+  udp: true
+
+- name: 11. H3-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: d3111010-60d3-11ee-9c2a-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg2-trojan.bonds.id
+  udp: true
+
+- name: 12. IDHE-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 18db31e0-60d4-11ee-b3d7-1239d0255272
+  skip-cert-verify: true
+  sni: sg-4.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg-4.test3.net
+  udp: true
+
+- name: 13. H1-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 407a0540-60d5-11ee-b536-1239d0255272
+  skip-cert-verify: true
+  sni: sg2-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg2-trojan.bonds.id
+  udp: true
+
+- name: 14. US-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: 4a14d620-60d4-11ee-a15c-1239d0255272
+  skip-cert-verify: true
+  sni: id-1.test3.net
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: id-1.test3.net
+  udp: true
+
+- name: 15. AMP-B
+  server: 104.18.107.64
+  port: 443
+  type: trojan
+  password: ac3166a0-60d4-11ee-9eea-1239d0255272
+  skip-cert-verify: true
+  sni: sg1-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg1-trojan.bonds.id
+  udp: true
+
+#🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰    
+dns:
+  nameserver:
+  - dhcp://"eth1"
+  - 192.168.7.1
+  - 8.8.8.8
+  - 8.8.4.4
+  - https://dns.adguard.com/dns-query
+  - https://dns.google/dns-query
+  - tls://dns.adguard.com
+  - tls://dns.google
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  fake-ip-filter:
+  - "+.*"
+  default-nameserver:
+  - 192.168.9.1
+  - 192.168.8.1
+  - 192.168.7.1
+  - 8.8.8.8
+  - 8.8.4.4
+redir-port: 7892
+tproxy-port: 7895
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+mode: global
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: reyre
+bind-address: "*"
+external-ui: "/usr/share/openclash/dashboard"
+ipv6: false
+tun:
+  enable: true
+  stack: system
+  device: utun
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://8.8.8.8:53
+  - tcp://8.8.4.4:53
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,Rule-Direct,DIRECT
+- RULE-SET,Rule-Reject,REJECT
+- MATCH,GLOBAL
+geodata-mode: false
+geodata-loader: memconservative
+sniffer:
+  enable: true
+  sniffing:
+  - tls
