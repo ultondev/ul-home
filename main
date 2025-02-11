@@ -258,7 +258,7 @@ proxies:
   server: 104.26.7.171
   port: 443
   type: trojan
-  password: 4a14d620-60d4-11ee-a15c-1239d0255272
+  password: 51e14c8f-d7ec-414a-a4a1-4be8a910bc04
   skip-cert-verify: true
   sni: sg4.v4trojn.xyz
   network: ws
