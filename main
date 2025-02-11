@@ -213,31 +213,31 @@ proxies:
   udp: true
 
 - name: 11. 🔴HF
-  server: 104.18.107.64
+  server: 104.26.7.171
   port: 443
   type: trojan
   password: 047d28e0-e836-11ef-bcc8-1239d0255272
   skip-cert-verify: true
-  sni: sg2-trojan.bonds.id
+  sni: fr1.test3.net
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg2-trojan.bonds.id
+      Host: fr1.test3.net
   udp: true
 
 - name: 12. 🔴HF
-  server: 104.18.107.64
+  server: 104.26.7.171
   port: 443
   type: trojan
   password: 14400c00-e836-11ef-b0ee-1239d0255272
   skip-cert-verify: true
-  sni: sg-4.test3.net
+  sni: fr1.test3.net
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg-4.test3.net
+      Host: fr1.test3.net
   udp: true
 
 - name: 13. 🔴SS4
