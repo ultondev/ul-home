@@ -19,6 +19,7 @@ proxy-groups:
   - 13. 🔴SS4
   - 14. 🔴SS4
   - 15. 🔴SS4
+  - 16. 🔴SS4
   url: http://www.gstatic.com/generate_204
   interval: '300'
 - name: 🟡INDOSAT
@@ -160,21 +161,21 @@ proxies:
   server: 104.26.7.171
   port: 443
   type: trojan
-  password: jagoanssh-elwowss
+  password: 27dc1590-e839-11ef-99e0-1239d0255272
   skip-cert-verify: true
-  sni: id2go.ipservers.xyz
+  sni: uk1.test3.net
   network: ws
   ws-opts:
-    path: /trojan
+    path: /howdy
     headers:
-      Host: id2go.ipservers.xyz
+      Host: uk1.test3.net
   udp: true
 
 - name: 8. 🔴HUK
   server: 104.26.7.171
   port: 443
   type: trojan
-  password: 6fa99340-dd88-11ef-8f25-1239d0255272
+  password: 18a79100-e839-11ef-9846-1239d0255272
   skip-cert-verify: true
   sni: uk1.test3.net
   network: ws
@@ -269,6 +270,20 @@ proxies:
   udp: true
 
 - name: 15. 🔴SS4
+  server: 104.26.7.171
+  port: 443
+  type: trojan
+  password: 8e3870a0-8d9b-431f-a423-47a0187fb9b8
+  skip-cert-verify: true
+  sni: sg4.v4trojn.xyz
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg4.v4trojn.xyz
+  udp: true
+
+- name: 16. 🔴SS4
   server: 104.26.7.171
   port: 443
   type: trojan
