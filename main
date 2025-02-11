@@ -184,7 +184,7 @@ proxies:
       Host: uk1.test3.net
   udp: true
 
-- name: 9. 🔴HS
+- name: 9. 🔴HUS
   server: 104.26.7.171
   port: 443
   type: trojan
@@ -198,7 +198,7 @@ proxies:
       Host: uk1.test3.net
   udp: true
 
-- name: 10. 🔴HS
+- name: 10. 🔴HUS
   server: 104.26.7.171
   port: 443
   type: trojan
