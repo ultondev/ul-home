@@ -298,22 +298,22 @@ proxies:
       Host: sg4.v4trojn.xyz
   udp: true
 
-  - name: 17. 🔴SSv3
-    server: 104.26.7.171
-    port: 80
-    type: vmess
-    uuid: 15ad2545-c1e4-4f17-b19e-157b63ccb6d6
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg3.v4vmess.xyz
-    network: ws
-    ws-opts:
-      path: /vmess-ws
-      headers:
-        Host: sg3.v4vmess.xyz
-    udp: true
+- name: 17. 🔴SSv3
+  server: 104.26.7.171
+  port: 80
+  type: vmess
+  uuid: 15ad2545-c1e4-4f17-b19e-157b63ccb6d6
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: sg3.v4vmess.xyz
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+    headers:
+      Host: sg3.v4vmess.xyz
+  udp: true
 
 #2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣2⃣
 - name: 1. 🟡EU-B
