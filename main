@@ -1,3 +1,39 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: global
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+rules:
+  - MATCH,GLOBAL
+
 proxy-groups:
 - name: 🔴TELKOMSEL
   #type: url-test#
@@ -62,15 +98,7 @@ proxy-groups:
   interval: '300'
 
 #🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰
-rule-providers:
-  Rule-Direct:
-    type: file
-    behavior: classical
-    path: "./direct.yaml"
-  Rule-Reject:
-    type: file
-    behavior: classical
-    path: "./reject.yaml"
+
 #🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰
 
 proxies:
@@ -667,67 +695,3 @@ proxies:
     headers:
       Host: sg4.v4trojn.xyz
   udp: true
-
-#🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰    
-dns:
-  nameserver:
-  - dhcp://"eth1"
-  - 192.168.7.1
-  - 8.8.8.8
-  - 8.8.4.4
-  - https://dns.adguard.com/dns-query
-  - https://dns.google/dns-query
-  - tls://dns.adguard.com
-  - tls://dns.google
-  enable: true
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  listen: 0.0.0.0:7874
-  fake-ip-filter:
-  - "+.*"
-  default-nameserver:
-  - 192.168.9.1
-  - 192.168.8.1
-  - 192.168.7.1
-  - 8.8.8.8
-  - 8.8.4.4
-redir-port: 7892
-tproxy-port: 7895
-port: 7890
-socks-port: 7891
-mixed-port: 7893
-mode: global
-log-level: silent
-allow-lan: true
-external-controller: 0.0.0.0:9090
-secret: reyre
-bind-address: "*"
-external-ui: "/usr/share/openclash/dashboard"
-ipv6: false
-tun:
-  enable: true
-  stack: system
-  device: utun
-  auto-route: false
-  auto-detect-interface: false
-  dns-hijack:
-  - tcp://8.8.8.8:53
-  - tcp://8.8.4.4:53
-profile:
-  store-selected: true
-  store-fake-ip: true
-
-rules:
-- DST-PORT,7895,REJECT
-- DST-PORT,7892,REJECT
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,Rule-Direct,DIRECT
-- RULE-SET,Rule-Reject,REJECT
-- MATCH,GLOBAL
-geodata-mode: false
-geodata-loader: memconservative
-sniffer:
-  enable: true
-  sniffing:
-  - tls
