@@ -33,3 +33,25 @@ dns:
     - 112.215.203.254
 rules:
   - MATCH,GLOBAL
+
+proxies:
+  - name: cxnxjxjdo
+    server: 104.26.7.171
+    port: 80
+    type: vless
+    uuid: a7a3dd88-85ba-4679-8010-c76c04814513
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sg4.v4vless.xyz
+    network: ws
+    ws-opts:
+      path: /vless-ws
+      headers:
+        Host: sg4.v4vless.xyz
+    udp: true
+proxy-groups:
+  - name: Masa Aktif Habis
+    type: select
+    proxies:
+      - VLESS-dkekdjsjsodk-ws
