@@ -57,8 +57,8 @@ proxy-groups:
   - 15. 🔴SS4
   - 16. 🔴SS4
   - 17. 🔴SSv3
-  url: http://www.gstatic.com/generate_204
-  interval: '300'
+  #url: http://www.gstatic.com/generate_204
+  #interval: '300'
 - name: 🟡INDOSAT
   type: load-balance
   disable-udp: false
@@ -78,8 +78,8 @@ proxy-groups:
   - 13. 🟡H1-B
   - 14. 🟡US-B
   - 15. 🟡AMP-B
-  url: http://www.gstatic.com/generate_204
-  interval: '300'
+  #url: http://www.gstatic.com/generate_204
+  #interval: '300'
 - name: 🖱GAME
   type: url-test
   disable-udp: false
@@ -94,8 +94,8 @@ proxy-groups:
   - 8. 🖱SS3
   - 9. 🖱SS3
   - 10. 🖱SS1
-  url: http://www.gstatic.com/generate_204
-  interval: '300'
+  #url: http://www.gstatic.com/generate_204
+  #interval: '300'
 
 #🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰
 
