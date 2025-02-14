@@ -35,7 +35,7 @@ rules:
   - MATCH,GLOBAL
 
 proxies:
-  - name: cxnxjxjdo
+  - name: error
     server: 104.26.7.171
     port: 80
     type: vless
@@ -54,4 +54,4 @@ proxy-groups:
   - name: Masa Aktif Habis
     type: select
     proxies:
-      - VLESS-dkekdjsjsodk-ws
+      - error
