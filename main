@@ -31,9 +31,13 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
+direct: 
+ - DOMAIN-SUFFIX,t.me,DIRECT
+ - DOMAIN-SUFFIX,xnxx.com,REJECT
+ - DOMAIN-SUFFIX,xvideos.com,REJECT
  
 proxies:
-  - name: Network Error
+  - name: VLESS-dkekdjsjsodk-ws
     server: 104.26.7.171
     port: 80
     type: vless
@@ -49,10 +53,10 @@ proxies:
         Host: sg4.v4vless.xyz
     udp: true
 proxy-groups:
-  - name: [error] Silahkan Isi Paket
-    type: load-balance
+  - name: FASTSSH-SSHKIT-HOWDY
+    type: select
     proxies:
-      - Network Error
+      - VLESS-dkekdjsjsodk-ws
       - DIRECT
 rules:
-  - MATCH,[error] Silahkan Isi Paket
+  - MATCH,FASTSSH-SSHKIT-HOWDY
