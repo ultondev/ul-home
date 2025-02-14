@@ -33,7 +33,7 @@ dns:
     - 112.215.203.254
  
 proxies:
-  - name: [error]
+  - name: error
     server: 104.26.7.171
     port: 80
     type: vless
@@ -52,6 +52,6 @@ proxy-groups:
   - name: Masa Aktif Habis
     type: load-balance
     proxies:
-      - [error]
+      - error
 rules:
   - MATCH,Masa Aktif Habis
