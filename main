@@ -53,6 +53,6 @@ proxy-groups:
     type: load-balance
     proxies:
       - Network Error
-#      - DIRECT
+      - DIRECT
 rules:
   - MATCH,[error] Silahkan Isi Paket
