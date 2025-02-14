@@ -4,7 +4,7 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
-mode: global
+mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
@@ -31,11 +31,13 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
-rules:
-  - MATCH,GLOBAL
-
+direct: 
+ - DOMAIN-SUFFIX,t.me,DIRECT
+ - DOMAIN-SUFFIX,xnxx.com,REJECT
+ - DOMAIN-SUFFIX,xvideos.com,REJECT
+ 
 proxies:
-  - name: error
+  - name: VLESS-dkekdjsjsodk-ws
     server: 104.26.7.171
     port: 80
     type: vless
@@ -51,7 +53,10 @@ proxies:
         Host: sg4.v4vless.xyz
     udp: true
 proxy-groups:
-  - name: Masa Aktif Habis
+  - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - error
+      - VLESS-dkekdjsjsodk-ws
+      - DIRECT
+rules:
+  - MATCH,FASTSSH-SSHKIT-HOWDY
