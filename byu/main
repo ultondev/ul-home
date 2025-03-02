@@ -158,14 +158,14 @@ proxy-providers:
       interval: 5
 proxy-groups:
 - name: CONNECTION
-  proxies: [ DIRECT, ðŸ“¶GRATIS, ðŸ“¶GRATIS 2, ðŸ“¶PREMIUM ]   
+  proxies: [ DIRECT, 📶FREE, 📶FREE 2, 📶PREMIUM ]   
 #include-all-providers: true
 #exclude-filter: UDP
   type: select
   url: 'http://cp.cloudflare.com/generate_204'
   interval: 3
   lazy: true
-- name: ðŸ“¶GRATIS
+- name: 📶FREE
   type: load-balance
   strategy: round-robin
   disable-udp: false
@@ -173,7 +173,7 @@ proxy-groups:
   - g1
   url: https://cp.cloudflare.com/generate_204
   interval: 3
-- name: ðŸ“¶GRATIS 2
+- name: 📶FREE 2
   type: select
   strategy: round-robin
   disable-udp: false
@@ -181,7 +181,7 @@ proxy-groups:
   - g2
   url: https://cp.cloudflare.com/generate_204
   interval: 3
-- name: ðŸ“¶PREMIUM
+- name: 📶PREMIUM
   type: select
   disable-udp: false
   use:
