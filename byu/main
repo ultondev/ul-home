@@ -1,0 +1,78 @@
+mode: rule
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: 
+external-ui-url: https://github.com/taamarin/yacd-meta/archive/gh-pages.zip
+bind-address: '*'
+proxy-providers:
+  g1:
+    type: http
+    url: https://prod-test.jdevcloud.com/api/vless?format=clash-provider&cdn=true&bug=162.159.138.78&cc=ID&limit=10
+    path: ./G1.gix
+    interval: 30
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 5
+  premium:
+    type: http
+    url: https://raw.githubusercontent.com/ultondev/ul-home/refs/heads/main/byu/servpremium.gix
+    path: ./servpremium.gix
+    interval: 5
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 5
+  g2:
+    type: http
+    url: https://raw.githubusercontent.com/ultondev/ul-home/refs/heads/main/byu/G2.gix
+    path: ./G2.gix
+    interval: 5
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 5
+proxy-groups:
+- name: CONNECTION
+  proxies: [ DIRECT, ðŸ“¶GRATIS, ðŸ“¶GRATIS 2, ðŸ“¶PREMIUM ]   
+#include-all-providers: true
+#exclude-filter: UDP
+  type: select
+  url: 'http://cp.cloudflare.com/generate_204'
+  interval: 3
+  lazy: true
+- name: ðŸ“¶GRATIS
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - g1
+  url: https://cp.cloudflare.com/generate_204
+  interval: 3
+- name: ðŸ“¶GRATIS 2
+  type: select
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - g2
+  url: https://cp.cloudflare.com/generate_204
+  interval: 3
+- name: ðŸ“¶PREMIUM
+  type: select
+  disable-udp: false
+  use:
+#  proxies:
+  - premium
+#  - MATCH LYNX
+  url: https://cp.cloudflare.com/generate_204
+  interval: 3
+  
+rules:
+#- AND,((NETWORK,udp),(DST-PORT,443)),REJECT
+#- AND,((NETWORK,udp),(GEOIP,google)),REJECT
+#- AND,((NETWORK,udp),(GEOSITE,rule-streaming)),REJECT
+#- GEOSITE,rule-ads,IKLAN
+#- GEOSITE,oisd-full,IKLAN
+#- GEOSITE,d3ward,IKLAN
+#- GEOSITE,antiscam,IKLAN
+- MATCH,CONNECTION
