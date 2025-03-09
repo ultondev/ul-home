@@ -131,7 +131,7 @@ dns:
 proxy-providers:
   g1:
     type: http
-    url: https://prod-test.jdevcloud.com/api/vless?format=clash-provider&cdn=true&bug=162.159.138.79&cc=SG&limit=20
+    url: https://prod-test.jdevcloud.com/api/vless?format=clash-provider&cdn=true&bug=162.159.138.79&cc=SG&limit=16
     path: ./G1.gix
     interval: 30
     health-check:
