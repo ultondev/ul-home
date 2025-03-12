@@ -158,7 +158,7 @@ proxy-providers:
       interval: 5
 proxy-groups:
 - name: CONNECTION
-  proxies: [ DIRECT, 📶FREE, 📶FREE 2, 📶PREMIUM ]   
+  proxies: [ 📶FREE, 📶FREE 2, 📶PREMIUM ]   
 #include-all-providers: true
 #exclude-filter: UDP
   type: select
