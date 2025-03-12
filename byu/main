@@ -186,7 +186,7 @@ proxy-groups:
   disable-udp: false
   use:
 #  proxies:
-  - premium
+  - pr
 #  - MATCH LYNX
   url: https://cp.cloudflare.com/generate_204
   interval: 3
