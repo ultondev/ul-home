@@ -166,7 +166,7 @@ proxy-groups:
   interval: 3
   lazy: true
 - name: 📶FREE
-  type: url-test
+  type: select
   strategy: round-robin
   disable-udp: false
   use:
