@@ -141,6 +141,7 @@ proxy-providers:
   serv2:
     type: http
     url: https://prod-test.jdevcloud.com/api/vless?format=clash-provider&cdn=true&bug=104.18.53.42&cc=SG&limit=20
+    path: ./se2.gix
     interval: 5
     health-check:
       enable: true
