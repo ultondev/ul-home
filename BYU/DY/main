@@ -131,7 +131,8 @@ dns:
 proxy-providers:
   serv1:
     type: http
-    url: https://raw.githubusercontent.com/ultondev/ul-home/refs/heads/main/BYU/DY/se3.gix
+    url: https://raw.githubusercontent.com/ultondev/ul-home/refs/heads/main/BYU/DY/se1.gix
+    path: ./se1.gix
     interval: 60
     health-check:
       enable: true
@@ -140,7 +141,6 @@ proxy-providers:
   serv2:
     type: http
     url: https://prod-test.jdevcloud.com/api/vless?format=clash-provider&cdn=true&bug=104.18.53.42&cc=SG&limit=20
-    path: ./se2.gix
     interval: 5
     health-check:
       enable: true
